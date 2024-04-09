@@ -33,7 +33,7 @@ export default function Navbar() {
     var logouttime=new Date()
     var logouttime = logouttime.toLocaleString('en-US', { timeZone: 'Asia/Kolkata' });
     
-    const url="http://localhost:8000/tracking";
+    const url="https://onelogica-assignment.onrender.com/tracking";
    
    const response= await fetch(url,{
       method:'POST',

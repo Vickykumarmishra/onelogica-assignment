@@ -74,7 +74,7 @@ export default function Signup() {
             console.log("I was closed by the timer");
           }
         });
-        const response = await fetch('http://localhost:8000/signup', { // Assuming i have a signup endpoint
+        const response = await fetch('https://onelogica-assignment.onrender.com/signup', { // Assuming i have a signup endpoint
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

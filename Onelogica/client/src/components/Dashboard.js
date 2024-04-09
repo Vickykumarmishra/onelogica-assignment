@@ -21,7 +21,7 @@ const Dashboard = () => {
 
     async function getlogs(){
 
-      const response=  await axios.get('http://localhost:8000/getlogs')
+      const response=  await axios.get('https://onelogica-assignment.onrender.com/getlogs')
            
       if(response.data){
         setLog(response.data);
