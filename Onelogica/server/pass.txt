@@ -1,0 +1,3 @@
+pass=g03yFFCFxfiNOpvo
+
+url= mongodb+srv://mishravicky0141:g03yFFCFxfiNOpvo@onelogicacluster.kzwt9tz.mongodb.net/?retryWrites=true&w=majority&appName=onelogicacluster
