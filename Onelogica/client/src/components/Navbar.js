@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import {useNavigate} from 'react-router-dom'
+import {NavLink, useNavigate} from 'react-router-dom'
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2'
 import {motion} from 'framer-motion'
@@ -74,7 +74,7 @@ export default function Navbar() {
     }
     else{
       document.getElementById("logout").style.display = 'none';
-    
+       document.getElementById("profile").style.display='none'
  
     }
   },[])
@@ -97,12 +97,29 @@ export default function Navbar() {
         <a class="nav-link" href="#" style={{color:'white'}} id="dashboard" onClick={handledashboard}><motion.b  whileHover={{boxShadow:'1px 1px 2px white, 0 0 25px white, 0 0 5px #ED7D31'}} transition={{duration:0.5}} style={{border:'yellow',padding:'0.5rem',marginBottom:'1rem',opacity:'1'}}>Dashborad</motion.b></a>
         <Link class="nav-link" to='/Login' style={{color:'white'}} id="login"><motion.b whileHover={{boxShadow:'1px 1px 2px white, 0 0 25px white, 0 0 5px #ED7D31'}} transition={{duration:0.5}} style={{border:'yellow',padding:'0.5rem',marginBottom:'1rem',opacity:'1'}}>LogIn</motion.b></Link>
         <a class="nav-link" href="#" style={{color:'white'}} id="logout" onClick={handlelogout}><motion.b  whileHover={{boxShadow:'1px 1px 2px white, 0 0 25px white, 0 0 5px #ED7D31'}} transition={{duration:0.5}} style={{border:'yellow',padding:'0.5rem',marginBottom:'1rem',opacity:'1'}}>LogOut</motion.b></a>
-        
+        <motion.a style={{marginRight:"0.5rem",cursor:'pointer',color:'white'}}  whileHover={{boxShadow:'1px 1px 2px white, 0 0 25px white, 0 0 5px #ED7D31'}} transition={{duration:0.5}} id="profile"  class="nav-link active" aria-current="page" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><b>Profile</b></motion.a>
       </div>
     </div>
   </div>
 </nav>
 
+
+
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+  <div class="offcanvas-header" style={{backgroundColor:'#ffc107',color:'white'}}>
+    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">User Profile</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+  <img src="user.jpg" className='img-fluid' style={{height:'5rem'}}></img><br></br><br></br>
+  <b> Username:-{localStorage.getItem("username")} </b>  <br></br>
+  <p><b>EmployeeId:- {localStorage.getItem("employeeid")}</b></p>
+      <p><b>Email Id:- {localStorage.getItem("email")}</b></p>
+
+      <NavLink to="/Login"><motion.button onClick={handlelogout} style={{backgroundColor:'#ffc107',color:'white',padding:'0.4rem',border:'0.1rem transparent'}}>Log Out</motion.button></NavLink>
+      
+  </div>
+</div>
     </div>
   )
 }
