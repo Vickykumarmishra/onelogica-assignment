@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { useFormik } from 'formik'
+import {motion} from 'framer-motion'
 import * as yup from "yup";
 // import Footer from './Footer';
 import { SchemaForm } from '../schema/schemaform';
@@ -110,7 +111,8 @@ export default function Login() {
     <div >
     <Navbar></Navbar>
     <div className='container' style={{marginTop:"2rem"}}>
-    <h6 style={{color:'white',backgroundColor:"#ffc107"}}>Admin Credentials:- username:AdminOneLogica25,password:aDmin25@1, email:adminvicky0141@gmail.com,</h6>
+    <h6 style={{color:'white',backgroundColor:"#ffc107"}}><motion.b  style={{color:'red'}} animate={{ opacity: [1, 0] }} transition={{ duration: 0.6, repeat: Infinity }}>Admin Credentials</motion.b>:- username:AdminOneLogica25, Password:aDmin25@1, Email:adminvicky0141@gmail.com</h6>
+    <p>Only Admin can view dashboard.So,please use above admin credentials to login if you want to view the dashboard.</p>
       <div className='row'>
 
         <div className='col-sm-12 col-md-6 col-lg-6'>

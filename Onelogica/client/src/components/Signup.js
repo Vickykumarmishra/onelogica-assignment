@@ -112,7 +112,7 @@ export default function Signup() {
     <>
     <Navbar></Navbar>
 <div className='container' style={{marginTop:"2rem"}} >
-<h6 style={{color:'white',backgroundColor:"#ffc107"}}>Admin Credentials:- username:AdminOneLogica25, password:aDmin25@1, email:adminvicky0141@gmail.com,</h6>
+{/* <h6 style={{color:'white',backgroundColor:"#ffc107"}}>Admin Credentials:- username:AdminOneLogica25, password:aDmin25@1, email:adminvicky0141@gmail.com,</h6> */}
 <div className='row'>
 
   <div className='col-sm-12 col-lg-6 col-md-6'>
